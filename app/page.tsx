@@ -322,7 +322,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 bg-gradient-to-r from-black to-[#DB1C08] text-white text-center">
+      <section className="py-20 px-4 bg-linear-to-r from-black to-[#DB1C08] text-white text-center">
         <h2 className="font-header text-3xl md:text-5xl font-bold">
           BEREIT FÜR IHRE REISE?
         </h2>
@@ -339,6 +339,83 @@ export default function Home() {
           <button className="border-2 border-white px-12 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition">
             Kontakt aufnehmen
           </button>
+        </div>
+      </section>
+
+      {/* CONTACT FORM – REQUEST FOR QUOTE */}
+      <section id="kontakt-formular" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-3xl">
+          {/* Headings */}
+          <h2 className="font-header text-4xl md:text-5xl font-bold text-center">
+            Request for Quote
+          </h2>
+          <p className="mt-4 text-center text-gray-600 text-lg">
+            Let us help you plan your holiday
+          </p>
+
+          {/* FORM */}
+          <form
+            className="mt-12 bg-white shadow-lg rounded-2xl p-8 md:p-12"
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("Message sent!");
+            }}>
+            {/* Name */}
+            <div className="mb-6">
+              <label className="block mb-2 font-header font-semibold">
+                Name
+              </label>
+              <input
+                type="text"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#DB1C08] focus:outline-none"
+                placeholder="Your full name"
+              />
+            </div>
+
+            {/* Email */}
+            <div className="mb-6">
+              <label className="block mb-2 font-header font-semibold">
+                Email
+              </label>
+              <input
+                type="email"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#DB1C08] focus:outline-none"
+                placeholder="Your email address"
+              />
+            </div>
+
+            {/* Country of Origin */}
+            <div className="mb-6">
+              <label className="block mb-2 font-header font-semibold">
+                Country of Origin
+              </label>
+              <input
+                type="text"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#DB1C08] focus:outline-none"
+                placeholder="Where are you traveling from?"
+              />
+            </div>
+
+            {/* Multi-Select Cape Town Locations */}
+            <div className="mb-8">
+              <label className="block mb-3 font-header font-semibold">
+                Preferred Locations in Cape Town (Select up to 5)
+              </label>
+
+              {/* Locations List */}
+              <CapeTownMultiSelect />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full bg-[#DB1C08] text-white py-4 rounded-xl font-header font-semibold text-lg shadow-lg hover:bg-red-700 transition">
+              Send Message
+            </button>
+          </form>
         </div>
       </section>
 
@@ -422,6 +499,60 @@ export default function Home() {
           © 2024 Seelbach Tours — Travel with Soul
         </div>
       </footer>
+    </div>
+  );
+}
+
+function CapeTownMultiSelect() {
+  const [selected, setSelected] = useState<string[]>([]);
+
+  const locations = [
+    "V&A Waterfront",
+    "Table Mountain",
+    "Robben Island",
+    "Cape Point",
+    "Kirstenbosch Gardens",
+    "Bo-Kaap",
+    "Hout Bay",
+    "Camp's Bay",
+    "Signal Hill",
+    "Constantia Wine Route",
+  ];
+
+  const toggle = (loc: string) => {
+    if (selected.includes(loc)) {
+      setSelected(selected.filter((x) => x !== loc));
+      return;
+    }
+
+    if (selected.length >= 5) {
+      alert("You can select up to 5 locations only.");
+      return;
+    }
+
+    setSelected([...selected, loc]);
+  };
+
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      {locations.map((loc) => {
+        const active = selected.includes(loc);
+
+        return (
+          <button
+            key={loc}
+            type="button"
+            onClick={() => toggle(loc)}
+            className={clsx(
+              "px-3 py-2 rounded-lg text-sm border transition font-header",
+              active
+                ? "bg-[#DB1C08] text-white border-[#DB1C08]"
+                : "bg-white text-gray-700 border-gray-300 hover:border-[#DB1C08]"
+            )}>
+            {loc}
+          </button>
+        );
+      })}
     </div>
   );
 }
