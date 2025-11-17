@@ -116,9 +116,25 @@ export default function Home() {
                 </a>
               )
             )}
-            <button className="bg-[#DB1C08] text-white px-6 py-3 rounded-lg font-header hover:bg-red-700 transition">
-              Jetzt buchen
-            </button>
+
+            {/* Powered By Section */}
+            <div className="flex items-center gap-2 ml-4 pl-4 border-l border-gray-300">
+              <span
+                className={clsx(
+                  "text-xs font-medium pt-5",
+                  isScrolled ? "text-gray-600" : "text-gray-300"
+                )}>
+                Powered By
+              </span>
+              <div className="relative w-20 h-20">
+                <Image
+                  src="/images/contact-logo.png"
+                  alt="Contact Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Mobile Hamburger */}
@@ -153,6 +169,21 @@ export default function Home() {
                 </a>
               )
             )}
+
+            {/* Mobile Powered By Section */}
+            <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
+              <span className="text-sm font-medium text-gray-600">
+                Powered By
+              </span>
+              <div className="relative w-8 h-8">
+                <Image
+                  src="/images/contact-logo.png"
+                  alt="Contact Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
             <button className="w-full bg-[#DB1C08] text-white px-6 py-3 rounded-lg font-header font-semibold">
               Jetzt buchen
@@ -491,6 +522,9 @@ export default function Home() {
                 placeholder="Ihre E-Mail"
                 className="flex-1 px-4 py-3 rounded-l-lg text-black focus:outline-none"
               />
+              <button className="bg-[#DB1C08] text-white px-4 py-3 rounded-r-lg hover:bg-red-700 transition">
+                →
+              </button>
             </div>
           </div>
         </div>
