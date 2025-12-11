@@ -8,7 +8,7 @@ export default function ContactPage() {
       {/* Hero Section with Background Image */}
       <div className="relative h-100 flex items-center justify-center">
         <Image
-          src="/images/Untitled design/CTDesign3.jpeg"
+          src="/images/Untitled design/CTDesign3_.jpeg"
           alt="Kontaktieren Sie Uns"
           fill
           className="object-cover"
