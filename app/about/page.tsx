@@ -91,7 +91,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center">
+      <section className="relative h-100 flex items-center justify-center">
         <Image
           src="/images/Untitled design/ct.png"
           alt="Über Seelbach Tours"
