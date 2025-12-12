@@ -1,6 +1,6 @@
 // components/Hero.tsx
 import Image from "next/image";
-import Background from "@/public/images/Untitled Design/CTDesign2.jpeg";
+import Background from "@/public/images/Untitled Design/CTDesign3_.jpeg";
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center">
