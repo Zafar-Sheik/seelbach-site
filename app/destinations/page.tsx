@@ -59,13 +59,12 @@ export default function DestinationsPage() {
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
       <div className="relative h-100 flex items-center justify-center">
-        <Image
-          src="/images/Untitled Design/CT_New.jpeg"
-          alt="Kapstadt Destinationen"
-          fill
-          className="object-cover"
-          priority
+        <img
+          src="/images/Untitled design/CT_New.jpeg"
+          alt="Luxus Weltreisen"
+          className="absolute inset-0 w-full h-full object-cover"
         />
+
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
