@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center">
       <Image
-        src="/images/Untitled Design/CTDesign2.jpeg"
+        src="/images/CTDesign2.jpeg"
         alt="Luxus Weltreisen"
         fill
         priority
