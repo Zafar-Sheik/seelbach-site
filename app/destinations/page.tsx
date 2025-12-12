@@ -60,7 +60,7 @@ export default function DestinationsPage() {
       {/* Hero Section with Background Image */}
       <div className="relative h-100 flex items-center justify-center">
         <Image
-          src="/images/CTDesign2.jpeg"
+          src="/images/Untitled Design/CT_New.jpeg"
           alt="Kapstadt Destinationen"
           fill
           className="object-cover"
