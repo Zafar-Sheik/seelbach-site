@@ -92,12 +92,10 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-100 flex items-center justify-center">
-        <Image
+        <img
           src="/images/Untitled design/ct.png"
-          alt="Über Seelbach Tours"
-          fill
-          className="object-cover"
-          priority
+          alt="Luxus Weltreisen"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-linear-to-r from-black/70 to-black/40"></div>
         <div className="relative z-10 text-center text-white px-4 max-w-4xl">
@@ -126,11 +124,10 @@ export default function AboutPage() {
             <div className="relative">
               <div className="bg-[#F9DD3F] p-3 rounded-2xl shadow-xl">
                 <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
-                  <Image
+                  <img
                     src="/images/green-point.jpg"
-                    alt="Unsere Mission"
-                    fill
-                    className="object-cover"
+                    alt="Luxus Weltreisen"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -270,10 +267,9 @@ export default function AboutPage() {
                 <div className="relative w-48 h-48 mx-auto mb-6">
                   <div className="absolute inset-0 bg-linear-to-br from-[#F9DD3F] to-[#DB1C08] rounded-full opacity-20 group-hover:opacity-30 transition"></div>
                   <div className="relative w-44 h-44 mx-auto mt-2 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                    <Image
+                    <img
                       src={member.image}
                       alt={member.name}
-                      fill
                       className="object-cover group-hover:scale-110 transition duration-500"
                     />
                   </div>

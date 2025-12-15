@@ -322,17 +322,15 @@ function PoweredBySection({ isScrolled }: { isScrolled: boolean }) {
       <div className="relative w-20 h-15">
         {/* Show color logo when scrolled, white logo when not scrolled */}
         {isScrolled ? (
-          <Image
+          <img
             src="/images/logo-color.png"
             alt="Contact Online Solutions"
-            fill
             className="object-contain"
           />
         ) : (
-          <Image
+          <img
             src="/images/contact-logo-white-1.png"
             alt="Contact Online Solutions"
-            fill
             className="object-contain"
           />
         )}

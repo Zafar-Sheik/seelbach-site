@@ -1,5 +1,4 @@
 // app/destinations/page.tsx
-import Image from "next/image";
 import Footer from "../components/Footer";
 
 export default function DestinationsPage() {
@@ -58,7 +57,7 @@ export default function DestinationsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
-      <div className="relative h-100 flex items-center justify-center">
+      <div className="relative h-96 md:h-[500px] flex items-center justify-center">
         <img
           src="/images/Untitled design/CT_New.jpeg"
           alt="Luxus Weltreisen"
@@ -93,20 +92,19 @@ export default function DestinationsPage() {
             {destinations.map((destination, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition group">
-                <div className="relative w-full h-48">
-                  <Image
+                className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition group h-full flex flex-col">
+                <div className="relative w-full h-48 overflow-hidden">
+                  <img
                     src={destination.image}
                     alt={destination.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition duration-500"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
                   />
                   <div className="absolute top-3 left-3 bg-[#DB1C08]/90 text-white px-3 py-1 rounded-full text-xs font-semibold">
                     {destination.location}
                   </div>
                 </div>
 
-                <div className="p-6">
+                <div className="p-6 grow">
                   <div className="flex items-start justify-between">
                     <h3 className="font-header text-xl font-bold">
                       {destination.name}
