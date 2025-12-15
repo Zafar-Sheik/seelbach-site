@@ -2,7 +2,6 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionHeader from "./ui/SectionHeader";
 
@@ -152,7 +151,6 @@ function DestinationCard({
   name,
   description,
   image,
-
   location,
 }: {
   name: string;
@@ -162,13 +160,12 @@ function DestinationCard({
   location: string;
 }) {
   return (
-    <div className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition group h-full">
-      <div className="relative w-full h-48">
-        <Image
+    <div className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition group h-full flex flex-col">
+      <div className="relative w-full h-48 overflow-hidden">
+        <img
           src={image}
           alt={name}
-          fill
-          className="object-cover group-hover:scale-105 transition duration-500"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
           sizes="(max-width: 768px) 300px, 350px"
         />
         {/* Location Badge */}
@@ -177,7 +174,7 @@ function DestinationCard({
         </div>
       </div>
 
-      <div className="p-6">
+      <div className="p-6 grow">
         <div className="flex items-start justify-between">
           <h3 className="font-header text-xl font-bold">{name}</h3>
           <span className="text-[#F9DD3F] font-bold text-lg ml-2">★</span>

@@ -14,10 +14,9 @@ export default function About() {
         <div className="relative">
           <div className="bg-[#F9DD3F] p-3 rounded-2xl shadow-xl">
             <div className="relative w-full h-72 sm:h-80 rounded-xl overflow-hidden">
-              <Image
+              <img
                 src="/images/Untitled design/CTDesign3_.jpeg"
                 alt="Über uns"
-                fill
                 className="object-cover"
               />
             </div>

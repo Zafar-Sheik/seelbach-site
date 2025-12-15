@@ -7,12 +7,10 @@ export default function ContactPage() {
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
       <div className="relative h-100 flex items-center justify-center">
-        <Image
+        <img
           src="/images/Untitled design/CTDesign3_.jpeg"
-          alt="Kontaktieren Sie Uns"
-          fill
-          className="object-cover"
-          priority
+          alt="Luxus Weltreisen"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/40"></div>
